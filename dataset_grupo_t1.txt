@@ -1,0 +1,26 @@
+RowID                               -> Apagada
+Date/Time                           -> Apagar datas inexistentes e fora de 2025, sorted por data
+Very High Voltage (kWh)             -> Cálculo com base nas outras voltagens, remover missing values (após calcular para todas as voltagens)
+High Voltage (kWh)                  -> Cálculo com base nas outras voltagens, remover missing values (após calcular para todas as voltagens)
+Medium Voltage (kWh)                -> Cálculo com base nas outras voltagens, remover missing values (após calcular para todas as voltagens)
+Low Voltage (kWh)                   -> Cálculo com base nas outras voltagens, remover missing values (após calcular para todas as voltagens)
+Total (kWh)                         -> Cálculo com base nas outras voltagens, remover missing values (após calcular para todas as voltagens)
+temperature_2m (°C)                 -> Assume-se temperatura, apaga-se registos com missing values
+relative_humidity_2m (%)            -> Interpolação temporal
+precipitation (mm)                  -> Recebe valores de rain (merged), missing values = 0
+apparent_temperature (°C)           -> Assume-se temperatura, apaga-se registos com missing values
+rain (mm)                           -> Merge com Precipitation
+snowfall (cm)                       -> Apagada
+cloud_cover (%)                     -> Interpolação temporal
+surface_pressure (hPa)              -> Interpolação temporal
+wind_speed_10m (km/h)               -> Interpolação temporal (ponto médio do valor anterior e seguinte, ordenado por datas)
+Diffuse_Radiation                   -> Missing values passam a moda
+Direct_Radiation                    -> Missing values passam a moda
+wind_speed_100m (km/h)              -> Regressão linear com base em wind_speed_10m (depois de tratmento de wind_speed)
+wind_direction_10m (°)              -> Interpolação temporal
+wind_direction_100m (°)             -> Interpolação temporal
+wind_gusts_10m (km/h)               -> Regressão linear com base em wind_speed_10m (depois de tratmento de wind_speed), 
+terrestrial_radiation (W/m²)        -> Interpolação temporal
+Consumptions                        -> Labels corrigidas
+
+Decision Tree Learner (70, 30), Decision Tree Predictor (Configuração normal), Scorer -> 0.899s 
