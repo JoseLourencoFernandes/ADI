@@ -23,4 +23,21 @@ wind_gusts_10m (km/h)               -> Regressão linear com base em wind_speed_
 terrestrial_radiation (W/m²)        -> Interpolação temporal
 Consumptions                        -> Labels corrigidas
 
-Decision Tree Learner (70, 30), Decision Tree Predictor (Configuração normal), Scorer -> 0.899s 
+Decision Tree Learner (70, 30) Stratified, Decision Tree Predictor (Configuração normal), Scorer -> 0.899
+Decision Tree Learner (80, 20) Stratified, Decision Tree Predictor (Configuração normal), Scorer -> 0.904
+Decision Tree Learner (80, 20) Stratified, Decision Tree Predictor, pruning MDL, Scorer -> 0.951
+X-Tree Learner (5 partitioner) Stratified, Decision Tree Predictor, pruning MDL, Scorer -> 0.958
+
+
+retirando apparent_temperature e wind_direction_100m
+0.902
+0.911
+0.951
+0.946 (com 5 partitioner), 0.947 (com 10 partitioner)
+
+
+adicionando dia, hora, mes e sazonalidade
+0.908
+0.907
+0.951
+0.958

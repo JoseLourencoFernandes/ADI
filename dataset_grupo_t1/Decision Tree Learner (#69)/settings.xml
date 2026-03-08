@@ -20,7 +20,7 @@
             <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
         </config>
-        <entry key="pruningMethod" type="xstring" value="No pruning"/>
+        <entry key="pruningMethod" type="xstring" value="MDL"/>
         <config key="enableReducedErrorPruning_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
